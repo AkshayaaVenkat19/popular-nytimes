@@ -15,7 +15,7 @@ const ArticleCard: React.FC<CardProps> = React.memo(
     const figCaption = media.length > 0 ? media[0]?.copyright : '';
 
     return imgURL ? (
-      <div className="grid grid-cols-3 gap-4 cursor-pointer border-b border-gray-400 pb-0.5 mb-2">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 cursor-pointer border-b border-gray-400 pb-0.5 mb-2">
         <div className="py-4">
           <div className="text-lg font-bold mb-2 font-serif leading-6">
             {title}
@@ -24,7 +24,7 @@ const ArticleCard: React.FC<CardProps> = React.memo(
             {abstract}
           </div>
         </div>
-        <div className="col-span-2 py-4 pl-3">
+        <div className="md:col-span-1 lg:col-span-2 py-4 pl-3">
           <figure>
             <img src={imgURL} alt={`${asset_id}`} className="w-full" />
             <figcaption className="text-[0.6rem] text-gray-500 float-end ">
